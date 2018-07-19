@@ -1,0 +1,93 @@
+included: # paths to include during linting.
+- socialApp
+- Sources
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+- Pods
+- Resources
+
+# COMMAND LINE RULES: ./swiftlint rules
+# RULES URL: https://github.com/realm/SwiftLint/blob/master/Rules.md
+# RULES CONFIG URL: https://github.com/realm/SwiftLint/tree/master/Source/SwiftLintFramework/Rules/RuleConfigurations
+
+disabled_rules: # rule identifiers to exclude from running
+# Cyclomatic Complexity Violation: Function should have complexity 10 or less
+- cyclomatic_complexity
+
+opt_in_rules: # some rules are only opt-in
+# nil coalescing operator is only evaluated if the lhs is nil, coalescing operator with nil as rhs is redundant
+- redundant_nil_coalescing
+
+# Some methods should not call super
+- prohibited_super_call
+
+# Some overridden methods should always call super
+- overridden_super_call
+
+# Implicitly unwrapped optionals should be avoided when possible.
+#NOTE: this option is questionable
+#- implicitly_unwrapped_optional
+
+# Force unwrapping should be avoided.
+- force_unwrapping
+
+# Prefer using .first(where:) over .filter { }.first in collections.
+- first_where
+
+# Prefer to use extension access modifiers
+- extension_access_modifier
+
+# Prefer checking isEmpty over comparing count to zero.
+- empty_count
+
+# Closure expressions should have a single space inside each brace.
+- closure_spacing
+
+# Closure end should have the same indentation as the line that started it.
+- closure_end_indentation
+
+# Operators should be surrounded by a single whitespace when they are being used.
+- operator_usage_whitespace
+
+# Function parameters should be aligned vertically if they're in multiple lines in a method call.
+- vertical_parameter_alignment_on_call
+
+# Functions and methods parameters should be either on the same line, or one per line.
+- multiline_parameters
+
+# IBOutlets should be private to avoid leaking UIKit to higher layers.
+- private_outlet
+
+# Parentheses are not needed when declaring closure arguments.
+#- unneeded_parentheses_in_closure_argument
+
+# Closure parameters should be on the same line as opening brace.
+- closure_parameter_position
+
+# A fatalError call should have a message.
+- fatal_error_message
+
+# configurations
+trailing_whitespace:
+  ignores_empty_lines: true
+  ignores_comments: true
+
+# Types should be nested at most 1 level deep, and statements should be nested at most 5 levels deep.
+nesting:
+  type_level: 2
+
+private_outlet:
+  allow_private_set: true
+
+line_length:
+  warning: 180
+  error: 250
+  ignores_function_declarations: true
+  ignores_urls: true
+
+identifier_name:
+  min_length: 1
+
+file_length:
+  warning: 500
+  error: 600
+  ignore_comment_only_lines: true
