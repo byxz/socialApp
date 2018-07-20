@@ -8,8 +8,7 @@
 
 import Foundation
 
-class AuthService {
-    
+final class AuthService {
     enum Error: Swift.Error {
         case badUrl
         case badJson
@@ -17,8 +16,40 @@ class AuthService {
         case api(error: Swift.Error)
     }
     
-    func auth(email: String, password: String, completion: @escaping (String?, Error?) -> Void) {
-        let urlString = Config.baseUrl + "/auth"
+    private enum ApiKeys: String {
+        case name
+        case email
+        case password
+        case description
+        case image
+    }
+    
+    enum Path {
+        case auth(email: String, password: String)
+        case register(name: String, description: String, email: String, password: String, image: String)
+        
+        var path: String {
+            switch self {
+            case .auth: return "/auth"
+            case .register: return "/register"
+            }
+        }
+        
+        var body: [String: Any] {
+            switch self {
+            case .auth(let email, let password): return [ApiKeys.email.rawValue: email,
+                                                         ApiKeys.password.rawValue: password]
+            case .register(let name, let description, let email, let password, let image): return [ApiKeys.name.rawValue: name,
+                                                                                                   ApiKeys.description.rawValue: description,
+                                                                                                   ApiKeys.email.rawValue: email,
+                                                                                                   ApiKeys.password.rawValue: password,
+                                                                                                   ApiKeys.image.rawValue: image]
+            }
+        }
+    }
+    
+    func send(task: Path, completion: @escaping (String?, Error?) -> Void) {
+        let urlString = Config.baseUrl + task.path
         
         guard let url = URL(string: urlString) else {
             completion(nil, .badUrl)
@@ -28,7 +59,7 @@ class AuthService {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         
-        let dict = ["email": email, "password": password]
+        let dict = task.body
         guard let jsonData = try? JSONSerialization.data(withJSONObject: dict, options: []) else {
             completion(nil, .badJson)
             return
@@ -54,5 +85,20 @@ class AuthService {
         
         task.resume()
     }
-    
+}
+
+// MARK: - LoginInteractor
+
+extension AuthService: LoginInteractor {
+    func loginer(email: String, password: String, completion: @escaping (String?, Swift.Error?) -> Void) {
+        send(task: .auth(email: email, password: password), completion: completion)
+    }
+}
+
+// MARK: - RegisterInteractor
+
+extension AuthService: RegisterInteractor {
+    func register(name: String, email: String, password: String, description: String, completion: @escaping (String?, Swift.Error?) -> Void) {
+        send(task: .register(name: name, description: description, email: email, password: password, image: ""), completion: completion)
+    }
 }

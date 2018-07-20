@@ -7,5 +7,6 @@ target 'socialApp' do
 
 pod 'SwiftLint'
 pod 'R.swift'
+pod 'KeychainSwift'
 
 end

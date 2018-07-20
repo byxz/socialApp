@@ -17,7 +17,8 @@
 		042D810F20F7D20500D7D042 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D810E20F7D20500D7D042 /* LoginPresenter.swift */; };
 		04804D5B20FE671A001ABB99 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04804D5A20FE671A001ABB99 /* Config.swift */; };
 		04804D5E20FE6796001ABB99 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04804D5D20FE6796001ABB99 /* AuthService.swift */; };
-		04E662DE20FFAD440062CC08 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E662DD20FFAD440062CC08 /* RegisterService.swift */; };
+		04AC8B6A21025E59006D2D54 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC8B6921025E59006D2D54 /* Auth.swift */; };
+		04AC8B6E21025EC0006D2D54 /* AuthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC8B6D21025EC0006D2D54 /* AuthScreen.swift */; };
 		64381D374DCBC44E8DEA9219 /* Pods_socialApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806D6FE85A33DA156D11E520 /* Pods_socialApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +35,8 @@
 		042D810E20F7D20500D7D042 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		04804D5A20FE671A001ABB99 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		04804D5D20FE6796001ABB99 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		04E662DD20FFAD440062CC08 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		04AC8B6921025E59006D2D54 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		04AC8B6D21025EC0006D2D54 /* AuthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreen.swift; sourceTree = "<group>"; };
 		806D6FE85A33DA156D11E520 /* Pods_socialApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_socialApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7978440AB439FF8302ECCC3 /* Pods-socialApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-socialApp/Pods-socialApp.release.xcconfig"; sourceTree = "<group>"; };
 		ED9CF1A79CC8458D13476665 /* Pods-socialApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-socialApp/Pods-socialApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		04059B0620F530C300E17488 /* socialApp */ = {
 			isa = PBXGroup;
 			children = (
+				04AC8B6B21025E87006D2D54 /* Screens */,
 				042D80FD20F7C92500D7D042 /* Resource */,
 				042D80FC20F7C91400D7D042 /* Source */,
 			);
@@ -123,14 +126,33 @@
 			isa = PBXGroup;
 			children = (
 				04804D5D20FE6796001ABB99 /* AuthService.swift */,
-				04E662DD20FFAD440062CC08 /* RegisterService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		04AC8B6B21025E87006D2D54 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				04AC8B6C21025E93006D2D54 /* Auth */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		04AC8B6C21025E93006D2D54 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				042D810420F7CA3700D7D042 /* Auth.storyboard */,
+				04AC8B6D21025EC0006D2D54 /* AuthScreen.swift */,
+				042D810B20F7D1AB00D7D042 /* Login */,
+				042D810A20F7D19900D7D042 /* Register */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		04E662DB20FFABE00062CC08 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				04AC8B6921025E59006D2D54 /* Auth.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,9 +160,6 @@
 		04E662DC20FFABF60062CC08 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				042D810A20F7D19900D7D042 /* Register */,
-				042D810B20F7D1AB00D7D042 /* Login */,
-				042D810420F7CA3700D7D042 /* Auth.storyboard */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -271,10 +290,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-socialApp/Pods-socialApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,9 +315,10 @@
 				042D810720F7D06200D7D042 /* LoginViewController.swift in Sources */,
 				04059B0820F530C300E17488 /* AppDelegate.swift in Sources */,
 				042D810920F7D07300D7D042 /* RegisterViewController.swift in Sources */,
+				04AC8B6E21025EC0006D2D54 /* AuthScreen.swift in Sources */,
 				04804D5B20FE671A001ABB99 /* Config.swift in Sources */,
-				04E662DE20FFAD440062CC08 /* RegisterService.swift in Sources */,
 				04804D5E20FE6796001ABB99 /* AuthService.swift in Sources */,
+				04AC8B6A21025E59006D2D54 /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

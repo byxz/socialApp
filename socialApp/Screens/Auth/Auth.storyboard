@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dAX-vY-u40">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -47,7 +47,7 @@
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
-                                            <action selector="loginButton:" destination="dAX-vY-u40" eventType="touchUpInside" id="lyI-JI-c0E"/>
+                                            <action selector="onLoginClick:" destination="dAX-vY-u40" eventType="touchUpInside" id="pas-nk-dse"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKQ-pn-XO5">
@@ -56,7 +56,7 @@
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                         <state key="normal" title="Register"/>
                                         <connections>
-                                            <action selector="registerButton:" destination="dAX-vY-u40" eventType="touchUpInside" id="g5e-dV-Tgd"/>
+                                            <action selector="onRegisterClick:" destination="dAX-vY-u40" eventType="touchUpInside" id="O0Q-c0-wCF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -75,8 +75,8 @@
                         <viewLayoutGuide key="safeArea" id="taZ-Pb-ldd"/>
                     </view>
                     <connections>
-                        <outlet property="loginTextField" destination="ayj-tP-Lj8" id="dVa-YL-hmO"/>
-                        <outlet property="passwordTextField" destination="bs9-ha-l8R" id="h2c-Ol-FaV"/>
+                        <outlet property="emailField" destination="ayj-tP-Lj8" id="GXe-Zz-M7L"/>
+                        <outlet property="passwordField" destination="bs9-ha-l8R" id="Jcb-fK-YQC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iib-uj-KJy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -91,17 +91,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abl-aR-fwY">
-                                <rect key="frame" x="20" y="40" width="34" height="30"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </state>
-                                <connections>
-                                    <action selector="backButton:" destination="R76-Kj-dQ2" eventType="touchUpInside" id="gSh-NO-hzO"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bhU-zT-2rC">
-                                <rect key="frame" x="62.5" y="183" width="250" height="185"/>
+                                <rect key="frame" x="62.5" y="183" width="250" height="250"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="754" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipt-KW-tLa">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="35"/>
@@ -131,29 +122,18 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Description" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HUC-Db-5bg">
-                                        <rect key="frame" x="0.0" y="150" width="250" height="35"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H6R-pg-W1j">
+                                        <rect key="frame" x="0.0" y="150" width="250" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="h3i-UI-vta"/>
+                                            <constraint firstAttribute="height" constant="100" id="xmJ-xm-Mv8"/>
                                         </constraints>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iX7-AJ-ZJR">
-                                <rect key="frame" x="147.5" y="393" width="80" height="33"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="8yw-rW-bqk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <state key="normal" title="Register"/>
-                                <connections>
-                                    <action selector="registerNewUser:" destination="R76-Kj-dQ2" eventType="touchUpInside" id="u3P-di-7nn"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t9N-gP-KMv">
                                 <rect key="frame" x="137.5" y="55" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -162,14 +142,24 @@
                                     <constraint firstAttribute="height" constant="100" id="uyc-zE-bE6"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iX7-AJ-ZJR">
+                                <rect key="frame" x="147" y="458" width="80" height="33"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="8yw-rW-bqk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="onRegisterClick:" destination="R76-Kj-dQ2" eventType="touchUpInside" id="SdZ-fh-vwz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2392156869" green="0.67450982329999998" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iX7-AJ-ZJR" firstAttribute="centerX" secondItem="tYG-Fi-eZ7" secondAttribute="centerX" id="0mc-Yh-wny"/>
                             <constraint firstItem="iX7-AJ-ZJR" firstAttribute="top" secondItem="bhU-zT-2rC" secondAttribute="bottom" constant="25" id="DdH-L0-b3t"/>
-                            <constraint firstItem="abl-aR-fwY" firstAttribute="top" secondItem="pKH-pu-M7G" secondAttribute="top" constant="20" id="JWt-nv-p2b"/>
                             <constraint firstItem="bhU-zT-2rC" firstAttribute="centerX" secondItem="tYG-Fi-eZ7" secondAttribute="centerX" id="R7Q-fg-eSa"/>
-                            <constraint firstItem="abl-aR-fwY" firstAttribute="leading" secondItem="pKH-pu-M7G" secondAttribute="leading" constant="20" id="gOg-2w-AXo"/>
                             <constraint firstItem="bhU-zT-2rC" firstAttribute="top" secondItem="t9N-gP-KMv" secondAttribute="bottom" constant="28" id="nYM-Sa-w4X"/>
                             <constraint firstItem="t9N-gP-KMv" firstAttribute="top" secondItem="tYG-Fi-eZ7" secondAttribute="top" constant="55" id="ngG-OP-RpH"/>
                             <constraint firstItem="t9N-gP-KMv" firstAttribute="centerX" secondItem="tYG-Fi-eZ7" secondAttribute="centerX" id="wV9-dt-9N4"/>
@@ -177,11 +167,11 @@
                         <viewLayoutGuide key="safeArea" id="pKH-pu-M7G"/>
                     </view>
                     <connections>
-                        <outlet property="descriptionUser" destination="HUC-Db-5bg" id="pD3-Gl-mmf"/>
-                        <outlet property="emailUser" destination="7bu-da-5Ws" id="zI3-Jp-xLN"/>
-                        <outlet property="image" destination="t9N-gP-KMv" id="z7y-HZ-tBy"/>
-                        <outlet property="nameUser" destination="ipt-KW-tLa" id="kSC-T1-tcg"/>
-                        <outlet property="passwordUser" destination="Avo-k0-B6W" id="QWB-oA-Hu5"/>
+                        <outlet property="descriptionView" destination="H6R-pg-W1j" id="csf-js-r3f"/>
+                        <outlet property="emailField" destination="7bu-da-5Ws" id="j1s-J5-RAC"/>
+                        <outlet property="imageView" destination="t9N-gP-KMv" id="W4Y-Qg-fUK"/>
+                        <outlet property="nameField" destination="ipt-KW-tLa" id="GYp-sR-cNI"/>
+                        <outlet property="passwordField" destination="Avo-k0-B6W" id="AJ4-oO-Y4g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBH-X2-1MG" userLabel="First Responder" sceneMemberID="firstResponder"/>
