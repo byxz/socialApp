@@ -89,7 +89,6 @@
 				04804D5A20FE671A001ABB99 /* Config.swift */,
 				04804D5C20FE6754001ABB99 /* Services */,
 				04E662DB20FFABE00062CC08 /* Models */,
-				04E662DC20FFABF60062CC08 /* Auth */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -155,13 +154,6 @@
 				04AC8B6921025E59006D2D54 /* Auth.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		04E662DC20FFABF60062CC08 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Auth;
 			sourceTree = "<group>";
 		};
 		EC8EB488C6C393542000C532 /* Frameworks */ = {

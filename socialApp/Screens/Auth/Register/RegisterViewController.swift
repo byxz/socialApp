@@ -14,6 +14,8 @@ protocol RegisterPresenterProtocol {
 
 final class RegisterViewController: UIViewController {
     
+    let imagePicker = UIImagePickerController()
+    
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private var nameField: UITextField!
     @IBOutlet private var emailField: UITextField!
@@ -45,6 +47,15 @@ final class RegisterViewController: UIViewController {
         let image = imageView.image
         presenter?.register(name: name, email: email, password: password, description: description, image: image)
     }
+    
+    @IBAction private func loadImageButtonTapped(_ sender: UIButton) {
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
 }
 
 // MARK: - UITextFieldDelegate
@@ -61,5 +72,22 @@ extension RegisterViewController: UITextFieldDelegate {
 extension RegisterViewController: RegisterView {
     func handle(error: Error) {
         print(error)
+    }
+}
+
+extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    private func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.contentMode = .scaleAspectFit
+            imageView.image = pickedImage
+        } else {
+            print("Error")
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    private func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
