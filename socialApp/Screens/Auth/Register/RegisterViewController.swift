@@ -54,6 +54,7 @@ final class RegisterViewController: UIViewController {
         imagePicker.sourceType = .photoLibrary
         
         present(imagePicker, animated: true, completion: nil)
+        
     }
     
 }

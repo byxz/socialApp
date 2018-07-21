@@ -15,6 +15,7 @@
 		042D810920F7D07300D7D042 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D810820F7D07300D7D042 /* RegisterViewController.swift */; };
 		042D810D20F7D1EB00D7D042 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D810C20F7D1EB00D7D042 /* RegisterPresenter.swift */; };
 		042D810F20F7D20500D7D042 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D810E20F7D20500D7D042 /* LoginPresenter.swift */; };
+		0472D39821039CC00044C99B /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472D39721039CC00044C99B /* ProfileService.swift */; };
 		04804D5B20FE671A001ABB99 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04804D5A20FE671A001ABB99 /* Config.swift */; };
 		04804D5E20FE6796001ABB99 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04804D5D20FE6796001ABB99 /* AuthService.swift */; };
 		04AC8B6A21025E59006D2D54 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC8B6921025E59006D2D54 /* Auth.swift */; };
@@ -33,6 +34,7 @@
 		042D810820F7D07300D7D042 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		042D810C20F7D1EB00D7D042 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		042D810E20F7D20500D7D042 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		0472D39721039CC00044C99B /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		04804D5A20FE671A001ABB99 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		04804D5D20FE6796001ABB99 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		04AC8B6921025E59006D2D54 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				04804D5D20FE6796001ABB99 /* AuthService.swift */,
+				0472D39721039CC00044C99B /* ProfileService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				04804D5B20FE671A001ABB99 /* Config.swift in Sources */,
 				04804D5E20FE6796001ABB99 /* AuthService.swift in Sources */,
 				04AC8B6A21025E59006D2D54 /* Auth.swift in Sources */,
+				0472D39821039CC00044C99B /* ProfileService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
