@@ -26,4 +26,9 @@ class Auth {
             return keychain.get(storeIdentifire)
         }
     }
+    
+    var isAuthorized: Bool {
+        return key != nil && key?.isEmpty == false
+    }
 }
+

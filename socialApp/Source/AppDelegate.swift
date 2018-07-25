@@ -15,10 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        AuthScreen().start(on: window)
-        window.makeKeyAndVisible()
-        self.window = window
+        // TODO: example
+        self.window = MainScreen().start()
         
         return true
     }

@@ -90,9 +90,7 @@ final class AuthService {
 // MARK: - LoginInteractor
 
 extension AuthService: LoginInteractor {
-    func loginer(email: String, password: String, completion: @escaping (String?, Swift.Error?) -> Void) {
-        send(task: .auth(email: email, password: password), completion: completion)
-    }
+    
 }
 
 // MARK: - RegisterInteractor

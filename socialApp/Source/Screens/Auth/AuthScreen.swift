@@ -12,8 +12,24 @@ final class AuthScreen {
     private weak var navigationController: UINavigationController?
     private var service: AuthService = AuthService()
     
-    func start(on window: UIWindow) {
-        guard let viewController = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
+    private var window: UIWindow?
+    
+    func open() {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.windowLevel = UIWindowLevelAlert
+        start(on: window)
+        window.makeKeyAndVisible()
+        
+        self.window = window
+    }
+    
+    func close() {
+        self.window?.isHidden = true
+        self.window = nil
+    }
+    
+    private func start(on window: UIWindow) {
+        guard let viewController = R.storyboard.auth.loginViewController() else {
             fatalError("Unable to instantiate LoginViewController")
         }
         
@@ -30,11 +46,7 @@ final class AuthScreen {
 // MARK: - LoginRouter -
 
 extension AuthScreen: LoginRouter {
-    //?????
-    func login() {
-        didRegister()
-    }
-    
+
     func openRegistration() {
         guard let viewController = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController else {
             fatalError("Unable to instantiate RegisterViewController")
@@ -51,6 +63,10 @@ extension AuthScreen: LoginRouter {
 
 extension AuthScreen: RegisterRouter {
     func didRegister() {
-        // TODO: OPEN MAIN APP
+        close()
+    }
+    
+    func didAuth() {
+        close()
     }
 }

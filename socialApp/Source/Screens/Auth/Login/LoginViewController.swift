@@ -10,7 +10,7 @@ import UIKit
 
 protocol LoginPresenterProtocol {
     func registrationClick()
-    func loginer(email: String, password: String)
+    func didLoginClick()
 }
 
 final class LoginViewController: UIViewController {
@@ -20,22 +20,18 @@ final class LoginViewController: UIViewController {
     
     private var presenter: LoginPresenterProtocol?
     
+    
     // MARK: - Attachments
     
     func attach(presenter: LoginPresenterProtocol) {
         self.presenter = presenter
     }
     
+    
     // MARK: - IBActions
     
     @IBAction private func onLoginClick(_ sender: UIButton) {
-        guard let email = emailField.text,
-            let password = passwordField.text else {
-                // IS EMPTY
-                // TEXT USER
-                return
-        }
-        presenter?.loginer(email: email, password: password)
+        presenter?.didLoginClick()
     }
     
     @IBAction private func onRegisterClick(_ sender: UIButton) {
@@ -46,9 +42,7 @@ final class LoginViewController: UIViewController {
 // MARK: - LoginView
 
 extension LoginViewController: LoginView {
-    func handle(error: Error) {
-        print(error)
-    }
+    
 }
 
 // MARK: - UITextFieldDelegate

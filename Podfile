@@ -5,8 +5,11 @@ target 'socialApp' do
   use_frameworks!
 
 
-pod 'SwiftLint'
+#pod 'SwiftLint'
 pod 'R.swift'
 pod 'KeychainSwift'
 
 end
+
+#"${PODS_ROOT}/SwiftLint/swiftlint"
+#"$PODS_ROOT/R.swift/rswift" generate "$SRCROOT/socialApp/Resources/"

@@ -56,8 +56,3 @@ extension RegisterPresenter: RegisterPresenterProtocol {
         }
     }
 }
-
-extension RegisterPresenter: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-///????
-}
