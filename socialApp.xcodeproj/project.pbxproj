@@ -26,6 +26,7 @@
 		0427902B210F7D4E00C66E96 /* ErrorDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427902A210F7D4E00C66E96 /* ErrorDict.swift */; };
 		0427902D210F7DA000C66E96 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427902C210F7DA000C66E96 /* ServiceError.swift */; };
 		0427902F210F7DCD00C66E96 /* Lication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427902E210F7DCD00C66E96 /* Lication.swift */; };
+		04279033210F815700C66E96 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04279032210F815700C66E96 /* Data.swift */; };
 		042D810520F7CA3700D7D042 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042D810420F7CA3700D7D042 /* Auth.storyboard */; };
 		042D810720F7D06200D7D042 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D810620F7D06200D7D042 /* LoginViewController.swift */; };
 		042D810920F7D07300D7D042 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D810820F7D07300D7D042 /* RegisterViewController.swift */; };
@@ -63,6 +64,7 @@
 		0427902A210F7D4E00C66E96 /* ErrorDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDict.swift; sourceTree = "<group>"; };
 		0427902C210F7DA000C66E96 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		0427902E210F7DCD00C66E96 /* Lication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lication.swift; sourceTree = "<group>"; };
+		04279032210F815700C66E96 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		042D810420F7CA3700D7D042 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		042D810620F7D06200D7D042 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		042D810820F7D07300D7D042 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -150,15 +152,32 @@
 			path = socialApp;
 			sourceTree = "<group>";
 		};
+		04279030210F80EC00C66E96 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				04279031210F813A00C66E96 /* Extension */,
+				0405181C2108E83A0083E86E /* Common.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		04279031210F813A00C66E96 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				04279032210F815700C66E96 /* Data.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		042D80FC20F7C91400D7D042 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				04059B0720F530C300E17488 /* AppDelegate.swift */,
 				04804D5A20FE671A001ABB99 /* Config.swift */,
-				0405181C2108E83A0083E86E /* Common.swift */,
 				04E662DB20FFABE00062CC08 /* Models */,
 				04804D5C20FE6754001ABB99 /* Services */,
 				04AC8B6B21025E87006D2D54 /* Screens */,
+				04279030210F80EC00C66E96 /* Utilities */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -407,6 +426,7 @@
 				04804D5E20FE6796001ABB99 /* AuthService.swift in Sources */,
 				0427902F210F7DCD00C66E96 /* Lication.swift in Sources */,
 				040518302108EBDC0083E86E /* MapViewController.swift in Sources */,
+				04279033210F815700C66E96 /* Data.swift in Sources */,
 				040518382108ED4D0083E86E /* MainPresenter.swift in Sources */,
 				040518232108EADB0083E86E /* UserAnnotation.swift in Sources */,
 				04AC8B6A21025E59006D2D54 /* Auth.swift in Sources */,
