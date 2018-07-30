@@ -21,7 +21,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationUsageDescription</key>
-	<string>Please ;)</string>
+	<string>What?</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Hello</string>
 	<key>UILaunchStoryboardName</key>

@@ -23,6 +23,9 @@
 		04059B0820F530C300E17488 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04059B0720F530C300E17488 /* AppDelegate.swift */; };
 		04059B0F20F530C400E17488 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04059B0E20F530C400E17488 /* Assets.xcassets */; };
 		04059B1220F530C400E17488 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04059B1020F530C400E17488 /* LaunchScreen.storyboard */; };
+		0427902B210F7D4E00C66E96 /* ErrorDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427902A210F7D4E00C66E96 /* ErrorDict.swift */; };
+		0427902D210F7DA000C66E96 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427902C210F7DA000C66E96 /* ServiceError.swift */; };
+		0427902F210F7DCD00C66E96 /* Lication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427902E210F7DCD00C66E96 /* Lication.swift */; };
 		042D810520F7CA3700D7D042 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042D810420F7CA3700D7D042 /* Auth.storyboard */; };
 		042D810720F7D06200D7D042 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D810620F7D06200D7D042 /* LoginViewController.swift */; };
 		042D810920F7D07300D7D042 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D810820F7D07300D7D042 /* RegisterViewController.swift */; };
@@ -30,6 +33,7 @@
 		042D810F20F7D20500D7D042 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D810E20F7D20500D7D042 /* LoginPresenter.swift */; };
 		043C99DB2108F53800091FA3 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C99DA2108F53800091FA3 /* R.generated.swift */; };
 		043C99DD2108F69A00091FA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 043C99DC2108F69900091FA3 /* Localizable.strings */; };
+		04559577210A2C1800A2BADE /* WallService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04559576210A2C1800A2BADE /* WallService.swift */; };
 		04804D5B20FE671A001ABB99 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04804D5A20FE671A001ABB99 /* Config.swift */; };
 		04804D5E20FE6796001ABB99 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04804D5D20FE6796001ABB99 /* AuthService.swift */; };
 		04AC8B6A21025E59006D2D54 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC8B6921025E59006D2D54 /* Auth.swift */; };
@@ -56,6 +60,9 @@
 		04059B0E20F530C400E17488 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04059B1120F530C400E17488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04059B1320F530C400E17488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0427902A210F7D4E00C66E96 /* ErrorDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDict.swift; sourceTree = "<group>"; };
+		0427902C210F7DA000C66E96 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		0427902E210F7DCD00C66E96 /* Lication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lication.swift; sourceTree = "<group>"; };
 		042D810420F7CA3700D7D042 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		042D810620F7D06200D7D042 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		042D810820F7D07300D7D042 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +70,7 @@
 		042D810E20F7D20500D7D042 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		043C99DA2108F53800091FA3 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		043C99DC2108F69900091FA3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		04559576210A2C1800A2BADE /* WallService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallService.swift; sourceTree = "<group>"; };
 		04804D5A20FE671A001ABB99 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		04804D5D20FE6796001ABB99 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		04AC8B6921025E59006D2D54 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
@@ -189,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				04804D5D20FE6796001ABB99 /* AuthService.swift */,
+				04559576210A2C1800A2BADE /* WallService.swift */,
 				040518262108EB600083E86E /* LocationService.swift */,
 				040518282108EB730083E86E /* GeoService.swift */,
 			);
@@ -221,6 +230,9 @@
 			children = (
 				040518212108EAC90083E86E /* Map */,
 				04AC8B6921025E59006D2D54 /* Auth.swift */,
+				0427902A210F7D4E00C66E96 /* ErrorDict.swift */,
+				0427902C210F7DA000C66E96 /* ServiceError.swift */,
+				0427902E210F7DCD00C66E96 /* Lication.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -374,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0427902D210F7DA000C66E96 /* ServiceError.swift in Sources */,
 				0405183A2108ED620083E86E /* MainViewController.swift in Sources */,
 				040518272108EB600083E86E /* LocationService.swift in Sources */,
 				042D810F20F7D20500D7D042 /* LoginPresenter.swift in Sources */,
@@ -385,11 +398,14 @@
 				043C99DB2108F53800091FA3 /* R.generated.swift in Sources */,
 				040518252108EAF40083E86E /* Place.swift in Sources */,
 				042D810920F7D07300D7D042 /* RegisterViewController.swift in Sources */,
+				04559577210A2C1800A2BADE /* WallService.swift in Sources */,
 				04AC8B6E21025EC0006D2D54 /* AuthScreen.swift in Sources */,
+				0427902B210F7D4E00C66E96 /* ErrorDict.swift in Sources */,
 				0405182C2108EBAC0083E86E /* MapScreen.swift in Sources */,
 				04804D5B20FE671A001ABB99 /* Config.swift in Sources */,
 				040518362108ED140083E86E /* MainScreen.swift in Sources */,
 				04804D5E20FE6796001ABB99 /* AuthService.swift in Sources */,
+				0427902F210F7DCD00C66E96 /* Lication.swift in Sources */,
 				040518302108EBDC0083E86E /* MapViewController.swift in Sources */,
 				040518382108ED4D0083E86E /* MainPresenter.swift in Sources */,
 				040518232108EADB0083E86E /* UserAnnotation.swift in Sources */,
